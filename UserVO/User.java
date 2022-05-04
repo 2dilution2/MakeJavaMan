@@ -1,7 +1,5 @@
 package UserVO;
 
-import java.util.Iterator;
-
 /*	1. 이름(String) ,주민번호 7자리(String) 가지는 UserVO 생성
 - 1000명의 랜덤 유저 생성
 - 이름은 히스기1~1000
@@ -23,7 +21,7 @@ public class User {
 		String BN = "";				// 주민등록번호 뒷자리 1~4
 		
 		for (int i = 0; i < name[0].length; i++) {
-			for (int j = 0; i < name[0].length ; i++) {
+			for (int j = 0; j < name[0].length ; j++) {
 				name[0][i] = "희스기" + (i + 1);
 			}
 			name[1][i] = FN + BN;			
