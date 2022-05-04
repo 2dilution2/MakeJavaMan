@@ -22,7 +22,6 @@ public class User {
 		String FN = "YYMMDD";		// 주민 등록번호 앞자리 2자씩 나눠서 연월일 구분!!(가능?)
 		String BN = "";				// 주민등록번호 뒷자리 1~4
 		
-		
 		for (int i = 0; i < name[0].length; i++) {
 			for (int j = 0; i < name[0].length ; i++) {
 				name[0][i] = "희스기" + (i + 1);
