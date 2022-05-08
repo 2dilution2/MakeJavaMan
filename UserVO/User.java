@@ -24,10 +24,10 @@ public class User {
 			for (int j = 0; j < name[0].length ; j++) {
 				name[0][i] = "희스기" + (i + 1);
 			}
-			name[1][i] = FN + BN;			
+//			name[1][i] = FN + BN;			
 		}
 		
-		System.out.println(name[1][999]);
+//		System.out.println(name[1][999]);
 		
 	}
 }
