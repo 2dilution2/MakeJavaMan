@@ -28,6 +28,5 @@ public class User {
 		}
 		
 		System.out.println(name[1][999]);
-		
 	}
 }
