@@ -19,12 +19,79 @@ public class User {
 		String[][] name = new String[2][1000];
 		String FN = "YYMMDD";		// 주민 등록번호 앞자리 2자씩 나눠서 연월일 구분!!(가능?)
 		String BN = "";				// 주민등록번호 뒷자리 1~4
+		String YY = "";
+		String MM = "";
+		String DD = "";
+		
 		
 		for (int i = 0; i < name[0].length; i++) {
-			for (int j = 0; j < name[0].length ; j++) {
+			for (int j = 0; j < name[0].length ; j++) {		// 이름 정의
 				name[0][i] = "희스기" + (i + 1);
 			}
-			name[1][i] = FN + BN;			
+		}
+		for (int i = 0; i < name[1].length; i++) {
+			int y = (int) (Math.random()*99)+1;				// 생년 입력
+			if (y < 10) {
+				YY = "0" + Integer.toString(y);				
+			} else {
+				YY = Integer.toString(y);
+			}
+			
+			int s;											// 생년에 따라 주민번호 뒷자리 입력
+			if (y > 22) {
+				s = (int) (Math.random()*2)+1;
+			} else {
+				s = (int) (Math.random()*2)+3;
+			}
+//			System.out.println(YY + "+" +s);
+			BN = "-" + Integer.toString(s);
+			
+			
+			
+			int m = (int) (Math.random()*12)+1;				// 생월 입력
+			if (m < 10) {
+				MM = "0" + Integer.toString(m);				
+			} else {
+				MM = Integer.toString(m);
+			}
+			
+			int d;											// 생일 입력
+			switch (m) {
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+					d = (int) (Math.random()*30)+1;
+					if (d < 10) {
+						DD = "0" + Integer.toString(d);				
+					} else {
+						DD = Integer.toString(d);
+					}
+					break;
+				case 2:
+					d = (int) (Math.random()*28)+1;
+					if (d < 10) {
+						DD = "0" + Integer.toString(d);				
+					} else {
+						DD = Integer.toString(d);
+					}
+					break;
+				default:
+					d = (int) (Math.random()*31)+1;
+					if (d < 10) {
+						DD = "0" + Integer.toString(d);				
+					} else {
+						DD = Integer.toString(d);
+					}
+					break;
+			}
+			
+			FN = FN.replace("YY", YY);						// 생년월일 주민번호 앞자리에 입력
+			FN = FN.replace("MM", MM);
+			FN = FN.replace("DD", DD);
+			
+			name[1][i] = FN + BN;		
+			
 		}
 		
 		System.out.println(name[1][999]);
