@@ -92,8 +92,10 @@ public class User {
 			
 			name[1][i] = FN + BN;		
 			
+			if (i == name[0].length-1) {				
+				System.out.println(name[1][999]);
+			}
 		}
 		
-		System.out.println(name[1][999]);
 	}
 }
