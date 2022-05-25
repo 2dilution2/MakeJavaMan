@@ -43,9 +43,9 @@ public class User {
 			} else {
 				s = (int) (Math.random()*2)+3;
 			}
-//			System.out.println(YY + "+" +s);
 			BN = "-" + Integer.toString(s);
 			
+//			System.out.println(YY + "+" +s);
 			
 			
 			int m = (int) (Math.random()*12)+1;				// 생월 입력
@@ -93,7 +93,7 @@ public class User {
 			name[1][i] = FN + BN;		
 			
 			if (i == name[0].length-1) {				
-//				System.out.println(name[1][999]);
+				System.out.println(name[1][999]);
 			}
 		}
 		
