@@ -45,7 +45,7 @@ public class User {
 			}
 			BN = "-" + Integer.toString(s);
 			
-//			System.out.println(YY + "+" +s);
+			System.out.println(YY + "+" +s);
 			
 			
 			int m = (int) (Math.random()*12)+1;				// 생월 입력
