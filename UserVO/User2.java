@@ -55,7 +55,7 @@ public class User2{
 	}
 	
 	public static void main(String[] args) {
-		User2 U2 = new User2("히스기0001","951113-1");
+//		User2 U2 = new User2("히스기0001","951113-1");
 		
 	}
 }
